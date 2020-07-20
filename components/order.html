@@ -283,8 +283,17 @@
     <script src="../js/cart.js"></script>
     <script>
         'use strict';
-        function cartValues () {
-            document.getElementById('total-belanja').innerText = localStorage.getItem('cart');
+        // function cartValues () {
+        //     document.getElementById('total-belanja').innerText = localStorage.getItem('cart');
+        // };
+        window.onload = function() {
+            var name = localStorage.getItem("cart");
+            if (name !== null) {
+                // $('.total-checkout').val(name);
+                console.log(name);
+                $(".total-checkout").append(name);
+                // alert(name);
+            }
         };
     </script>
 </body>
